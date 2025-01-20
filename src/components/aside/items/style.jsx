@@ -6,7 +6,11 @@ export const InfoSteps = styled.div`
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    @media (max-width: 800px) {
+      padding: 0;
+      transform: translateY(30px)
+    }
 `
 
 export const NumberItem = styled.div`
@@ -24,7 +28,9 @@ export const NumberItem = styled.div`
         background-color: #BEE1FF;
         border: none;
         color: hsl(213, 96%, 18%);
-
+    };
+    @media (max-width: 800px) {
+        width: 40px;
     }
     `
 
@@ -34,16 +40,26 @@ export const Info = styled.div`
     display: flex;
     gap: 2px;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    @media (max-width: 800px) {
+        width: 0;
+    }
+    
     `
 
 export const InfoH4 = styled.h4`
     color:#ccc;
     font-size: 11px;
-    font-weight: 400
+    font-weight: 400;
+    @media (max-width: 800px) {
+        display: none;
+    }
     `
 
 export const InfoH3 = styled.h3`
     color:#fff;
     font-size: 16px;
+    @media (max-width: 800px) {
+        display: none;
+    }
     `

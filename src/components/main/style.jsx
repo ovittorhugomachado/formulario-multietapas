@@ -9,7 +9,16 @@ export const Container = styled.main`
     position: relative;
     display: flex;
     align-items: center;
-    margin: 40px
+    margin: 40px;
+     @media (max-width: 800px) {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+        background-color: red;
+        justify-content: center;
+        }
     `
 
 export const Buttons = styled.div`
@@ -19,7 +28,7 @@ export const Buttons = styled.div`
     justify-content: space-between;
     position: absolute;
     bottom: 35px;
-    right: 80px
+    right: 80px;
     `
 
 export const ButtonNext = styled.button`
@@ -37,16 +46,16 @@ export const ButtonNext = styled.button`
     border: none;
     `
 
-        export const ButtonBack = styled.button`
-    width:150px;
-    height:50px;
+export const ButtonBack = styled.button`
+    background-color: #fff;
     cursor: pointer;
     &:hover {
         color: hsl(0, 0.00%, 34.10%);
-        };
+        }
     color: #000;
     font-weight: 700;
     font-size: 16px;
     border-radius: 7px;
     border: none;
+    margin-left: 50px;
     `

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Step1 = styled.div`
+export const ContainerStep = styled.div`
     width: 50%;
     height: 300px;
     background-color: transparent;

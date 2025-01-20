@@ -1,16 +1,16 @@
-import { DivPlans, Plan, PricePlan, Step2, SubTitle, Title, NamePlan, ButtonToggle, DivToggle, TextToggle } from "./style";
+import { DivPlans, Plan, PricePlan, ContainerStep, SubTitle, Title, NamePlan, ButtonToggle, DivToggle, TextToggle } from "./style";
 import { useState } from "react";
 
-export const Step2Component = () => {
-    const [isActive, setIsActive] = useState(false);
+export const ContainerStepComponent = () => {
+    {/*const [isActive, setIsActive] = useState(false);
 
     const handleToggle = () => {
         setIsActive((prev) => !prev);
-    };
+    };*/}//Não sei se vai precisar
 
     return (
         <>
-            <Step2>
+            <ContainerStep>
                 <Title>Selecione seu plano</Title>
                 <SubTitle>Você tem a opção de cobrança mensal ou anual</SubTitle>
                 <DivPlans>
@@ -37,7 +37,7 @@ export const Step2Component = () => {
                 </DivPlans>
 
 
-            </Step2>
+            </ContainerStep>
         </>
     )
 }

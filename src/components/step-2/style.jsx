@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Step2 = styled.div`
+export const ContainerStep = styled.div`
     width: 50%;
     height: 320px;
     background-color: transparent;
@@ -31,7 +31,7 @@ export const DivPlans = styled.div`
 export const Plan = styled.div`
     height: 100%;
     border: 1px solid hsl(0, 1.60%, 74.90%);
-    margin: 0 10px;
+    margin-right: 12px;
     flex: 1;
     border-radius: 10px;
     padding: 18px;
