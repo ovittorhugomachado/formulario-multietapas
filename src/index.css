@@ -1,17 +1,17 @@
 
 
-* {
+* { /*temporario*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "ubuntu";
 }
-html, body, #root {
+html, body, #root { /*temporario*/
   width: 100%;
   height: 100%;
 }
 
-#root {
+#root { /*temporario*/
   background-color: black;
   display: flex;
   justify-content: center;

@@ -58,6 +58,7 @@ export const InfoH4 = styled.h4`
 
 export const InfoH3 = styled.h3`
     color:#fff;
+    font-weight: 700;
     font-size: 16px;
     @media (max-width: 800px) {
         display: none;

@@ -1,7 +1,7 @@
-import { DivPlans, Plan, PricePlan, ContainerStep, SubTitle, Title, NamePlan, ButtonToggle, DivToggle, TextToggle } from "./style";
+import { DivPlans, Plan, PricePlan, ContainerStep, SubTitle, Title, NamePlan, ButtonToggle, DivToggle, TextToggle, TextPlan } from "./style";
 import { useState } from "react";
 
-export const ContainerStepComponent = () => {
+export const ContainerStep2Component = () => {
     {/*const [isActive, setIsActive] = useState(false);
 
     const handleToggle = () => {
@@ -16,18 +16,25 @@ export const ContainerStepComponent = () => {
                 <DivPlans>
                     <Plan>
                         <img src="/icon-arcade.svg" alt="" />
-                        <NamePlan>Arcade</NamePlan>
-                        <PricePlan>R$10 p/ mês</PricePlan>
+                        <TextPlan>
+                            <NamePlan>Arcade</NamePlan>
+                            <PricePlan>R$10 p/ mês</PricePlan>
+                        </TextPlan>
                     </Plan>
                     <Plan>
                         <img src="/icon-advanced.svg" alt="" />
-                        <NamePlan>Advanced</NamePlan>
-                        <PricePlan>R$20 p/ mês</PricePlan>
+                        <TextPlan>
+                            <NamePlan>Advanced</NamePlan>
+                            <PricePlan>R$20 p/ mês</PricePlan>
+                        </TextPlan>
                     </Plan>
                     <Plan className="active">
                         <img src="/icon-pro.svg" alt="" />
-                        <NamePlan>Pro</NamePlan>
-                        <PricePlan>R$30 p/ mês</PricePlan>
+                        <TextPlan>
+                            <NamePlan>Pro</NamePlan>
+                            <PricePlan>R$30 p/ mês</PricePlan>
+                        </TextPlan>
+
                     </Plan>
                     <DivToggle>
                         <TextToggle isActive>Por mês</TextToggle>

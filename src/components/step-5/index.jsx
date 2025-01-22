@@ -1,6 +1,6 @@
 import { Description, DivThanks, Title } from "./style";
 
-export const Step5Component = () => {
+export const ContainerStep5Component = () => {
     return (
         <>
            <DivThanks>

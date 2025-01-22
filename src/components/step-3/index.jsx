@@ -1,6 +1,6 @@
 import { DivAdditionals, Additional, AdditionalName, ContainerStep, SubTitle, Title, CheckBox, NameDescription, DivText, PriceAdditional } from "./style";
 
-export const Step3Component = () => {
+export const ContainerStep3Component = () => {
     return (
         <>
             <ContainerStep>

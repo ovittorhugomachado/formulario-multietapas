@@ -7,7 +7,7 @@ export const SideMenu = styled.div`
     height: 100%;
     padding: 40px 12px;
     border-radius: 10px;
-    background-image: url("/bg-sidebar-desktop.svg");
+    background-image: url("bg-sidebar-desktop.svg");
     background-size: cover;
     @media (max-width: 800px) {
         background-image: url("/bg-sidebar-mobile.svg");

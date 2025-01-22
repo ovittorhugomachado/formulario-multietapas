@@ -6,7 +6,28 @@ export const ContainerStep = styled.div`
     background-color: transparent;
     position: absolute;
     top: 75px;
-    right: 80px
+    right: 80px;
+    @media (max-width: 800px) {
+        background-color: #fff;
+        padding: 40px 30px;
+        width: 80%;
+        height: 450px;
+        position: absolute;
+        top: 100px;
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: 10px;
+        text-align: center;     
+    };
+    @media (max-width: 565px) {
+        padding-top: 30px;
+        
+    };
+    @media (max-width: 400px) {
+        height: 450px;
+        width: 90%;   
+        padding: 40px 15px 
+    }
 `
 
 export const Title = styled.h1`
@@ -17,7 +38,10 @@ export const SubTitle = styled.h2`
     color: hsl(0, 0.80%, 50.60%);
     font-size: 16px;
     font-weight: 400;
-    margin: 5px 0 45px
+    margin: 5px 0 45px; 
+    @media (max-width: 800px) {
+        margin-bottom: 20px;
+    };
 `
 export const PlanFinish = styled.div`
     width: 100%;

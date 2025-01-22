@@ -1,6 +1,6 @@
 import { ContainerStep, Title, SubTitle, LabelInput, Input } from "./style";
 
-export const ContainerStepComponent = () => {
+export const ContainerStep1Component = () => {
     return (
         <>
             <ContainerStep>
@@ -12,10 +12,7 @@ export const ContainerStepComponent = () => {
                 <Input type="text" placeholder="Digite seu email"></Input>
                 <LabelInput>Celular</LabelInput>
                 <Input type="text" placeholder="Digite seu número"></Input>
-
-
             </ContainerStep>
-
         </>
     )
 }

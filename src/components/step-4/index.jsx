@@ -1,7 +1,7 @@
 import { ChangePlan, ContainerStep, PlanFinish, PlanName, SubTitle, Title, Total, Text, PlanPrice, Items, PriceItem, PriceTotal } from "./style"
 
 
-export const Step4Component = () => {
+export const ContainerStep4Component = () => {
     return (
         <>
             <ContainerStep>

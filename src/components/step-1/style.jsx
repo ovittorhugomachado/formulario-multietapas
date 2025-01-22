@@ -1,39 +1,38 @@
 import styled from "styled-components";
+import { MediaSizes } from "../../style/media-sizes/media-sizes";
+
 
 export const ContainerStep = styled.div`
     width: 50%;
-    height: 300px;
     background-color: transparent;
     position: absolute;
     top: 75px;
-    right: 80px
+    right: 80px;
+    @media (max-width: ${MediaSizes.desktopSmall}) {
+        background-color: #fff;
+        padding: 40px 30px;
+        width: 80%;
+        height: 400px;
+        position: absolute;
+        top: 100px;
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: 10px;    
+    };
+     @media (max-width: ${MediaSizes.tablet}) {
+        height: 350px;
+        width: 90%;    
+    }
 `
 
 export const Title = styled.h1`
-    color: hsl(213, 96%, 18%);
 `
 
 export const SubTitle = styled.h2`
-    color: hsl(0, 0.80%, 50.60%);
-    font-size: 16px;
-    font-weight: 400;
-    margin: 5px 0 45px
 `
 
 export const LabelInput = styled.label`
-    color: hsl(213, 96%, 18%);
-    font-size: 16px;
-    font-weight: 400 
 `
 
 export const Input = styled.input`
-    height: 42px;
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid hsl(0, 1.60%, 74.90%);
-    padding-left: 30px;
-    margin-bottom: 24px
 `
-
-
-
