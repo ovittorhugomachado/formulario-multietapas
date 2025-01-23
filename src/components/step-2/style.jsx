@@ -1,14 +1,14 @@
 import styled from "styled-components";
+import { MediaSizes } from "../../style/media-sizes/media-sizes";
 
 export const ContainerStep = styled.div`
     width: 50%;
-    height: 320px;
     background-color: transparent;
     position: absolute;
     top: 75px;
     right: 80px;
     margin-bottom: 40px;
-    @media (max-width: 800px) {
+    @media (max-width: ${MediaSizes.desktopSmall}) {
         background-color: #fff;
         padding: 40px 30px;
         width: 80%;
@@ -20,27 +20,20 @@ export const ContainerStep = styled.div`
         border-radius: 10px;
         text-align: center;     
     };
-    @media (max-width: 565px) {
+    @media (max-width: ${MediaSizes.tablet}) {
         height: 500px;
         padding-top: 30px;
         
     };
 `
 
-export const Title = styled.h1`
-    color: hsl(213, 96%, 18%);
-`
+export const Title = styled.h1``
 
 export const SubTitle = styled.h2`
-    color: hsl(0, 0.80%, 50.60%);
-    font-size: 16px;
-    font-weight: 400;
-    margin: 5px 0 45px
 `
 
 export const DivPlans = styled.div`
     width: 500px;
-    height: 160px;
     display: flex;
     position: absolute;
     right: 50%;
@@ -50,13 +43,10 @@ export const DivPlans = styled.div`
     @media (max-width: 880px) {
         justify-content: end;
     }
-    @media (max-width: 800px) {
+    @media (max-width: ${MediaSizes.desktopSmall}) {
         width: 95%;
         justify-content: center;  
     };
-    
-    
-    
 `
 
 export const Plan = styled.div`
@@ -73,13 +63,10 @@ export const Plan = styled.div`
     @media (max-width: 880px) {
         width: 130px;  
     };
-    @media (max-width: 565px) {
+    @media (max-width: ${MediaSizes.tablet}) {
         width: 100%;
         height: 75px;
-        justify-content: center; 
         margin-bottom: 10px; 
-    };
-    @media (max-width: 565px) {
         display: flex; 
         justify-content: start;
     };
@@ -94,20 +81,15 @@ export const TextPlan = styled.div`
     };
 `
 
-export const NamePlan = styled.h4`
-    font-size: 18px;
-    color: hsl(213, 96%, 18%);
+export const NamePlan = styled.h3`
     margin: 35px 0 5px 0;
-    @media (max-width: 565px) {
+    @media (max-width: ${MediaSizes.tablet}) {
         margin-top: 0; 
     };
 `
 
 export const PricePlan = styled.h4`
-    font-size: 18px;
-    color: hsl(0, 0.80%, 50.60%);
     font-size: 16px;
-    font-weight: 400;
 `
 
 export const DivToggle = styled.div`
@@ -118,10 +100,10 @@ export const DivToggle = styled.div`
     display: flex;
     justify-content: center;
     gap: 12px;
-    @media (max-width: 565px) {
+    @media (max-width: ${MediaSizes.tablet}) {
         bottom: -180px 
     };
-    @media (max-width: 455px) {
+    @media (max-width: ${MediaSizes.mobile}) {
         bottom: -150px 
     };
 `
@@ -145,13 +127,13 @@ export const ButtonToggle = styled.button`
         height: 15px;
         border-radius: 50%;
         background: white;
-        top: 47%;
-        left: ${(props) => (props.isActive ? "calc(100% - 35px)" : "3px")};
+        top: 50%;
+        left: ${(props) => (props.$isActive ? "calc(100% - 20px)" : "3px")};
         transform: translateY(-50%);
         transition: left 0.3s ease;
     }
-`
+`;
 
 export const TextToggle = styled.h3`
-    color: ${(props) => (props.isActive ? "hsl(213, 96%, 18%)" : "hsl(0, 1.60%, 74.90%)")}  
-`
+    color: ${(props) => (props.$isActive ? "hsl(213, 96%, 18%)" : "hsl(0, 1.60%, 74.90%)")};
+`;

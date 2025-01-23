@@ -2,10 +2,10 @@ import { DivPlans, Plan, PricePlan, ContainerStep, SubTitle, Title, NamePlan, Bu
 import { useState } from "react";
 
 export const ContainerStep2Component = () => {
-    {/*const [isActive, setIsActive] = useState(false);
+    {/*const [isActive, set] = useState(false);
 
     const handleToggle = () => {
-        setIsActive((prev) => !prev);
+        setIsactive((prev) => !prev);
     };*/}//Não sei se vai precisar
 
     return (
@@ -28,7 +28,7 @@ export const ContainerStep2Component = () => {
                             <PricePlan>R$20 p/ mês</PricePlan>
                         </TextPlan>
                     </Plan>
-                    <Plan className="active">
+                    <Plan className="active"> {/*classname teste */}
                         <img src="/icon-pro.svg" alt="" />
                         <TextPlan>
                             <NamePlan>Pro</NamePlan>
@@ -37,7 +37,7 @@ export const ContainerStep2Component = () => {
 
                     </Plan>
                     <DivToggle>
-                        <TextToggle isActive>Por mês</TextToggle>
+                        <TextToggle $isActive>Por mês</TextToggle>
                         <ButtonToggle />
                         <TextToggle>Por ano</TextToggle>
                     </DivToggle>

@@ -12,7 +12,7 @@ html, body, #root { /*temporario*/
 }
 
 #root { /*temporario*/
-  background-color: black;
+  background-color: hsl(233, 20.00%, 92.20%);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { MediaSizes } from "../../style/media-sizes/media-sizes";
 
 export const Container = styled.main`
     width: 875px;
-    height: 600px;
+    min-height: 600px;
     background-color: #fff;
     border-radius: 12px;
     padding: 15px 30px 15px 15px;
@@ -10,52 +11,81 @@ export const Container = styled.main`
     display: flex;
     align-items: center;
     margin: 40px;
-     @media (max-width: 800px) {
+    @media (max-width: ${MediaSizes.desktopSmall}) {
         width: 100%;
         height: 100%;
+        background-color: var(--background-body);
         margin: 0;
         border-radius: 0;
         padding: 0;
-        background-color: red;
         justify-content: center;
-        }
+    };
+    @media (max-width: ${MediaSizes.desktopSmall}) {
+        height: 107%
+    };
+
     `
 
 export const Buttons = styled.div`
-    height: 50px;
+    height: 80px;
     width: 55%;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     position: absolute;
     bottom: 35px;
     right: 80px;
+    @media (max-width: ${MediaSizes.desktopSmall}) {
+        background-color: #fff;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        right: 0;
+    }
+    @media (max-width: ${MediaSizes.tablet}) {
+        height: 60px;
+    }
+    
     `
 
 export const ButtonNext = styled.button`
+    height: 50px;
     width:150px;
-    height:50px;
-    background-color: hsl(213, 96%, 18%);
+    align-self: center;
+    background-color: var(--primary-color);
     cursor: pointer;
     &:hover {
-        background-color: hsl(213, 96%, 28%);
+        opacity: 0.9;
         };
     color: #fff;
     font-weight: 700;
     font-size: 16px;
     border-radius: 7px;
     border: none;
+    @media (max-width: ${MediaSizes.desktopSmall}){
+        margin-right: 10%;
+    }
+    @media (max-width: ${MediaSizes.tablet}){
+        width: 120px;
+    }
     `
 
 export const ButtonBack = styled.button`
     background-color: #fff;
     cursor: pointer;
-    &:hover {
-        color: hsl(0, 0.00%, 34.10%);
-        }
     color: #000;
     font-weight: 700;
     font-size: 16px;
     border-radius: 7px;
     border: none;
     margin-left: 50px;
+    &:hover {
+        opacity: 0.6;
+    }
+        @media (max-width: ${MediaSizes.desktopSmall}){
+        margin-left: 10%;
+    }
+        @media (max-width: ${MediaSizes.tablet}){
+        margin-left: 10%;
+    }
     `

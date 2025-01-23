@@ -14,7 +14,7 @@ export const Styles = createGlobalStyle`
     --secondary-color: hsl(231, 11%, 63%);
     --purple: hsl(243, 100%, 62%);
     --pastel-blue: hsl(228, 100%, 84%);  
-    --background-body: hsl(229, 24%, 87%);
+    --background-body: hsl(233, 20.00%, 92.20%);
     --error-color: hsl(354, 84%, 57%);
 }
 
@@ -55,6 +55,7 @@ h2 {
 
 h3 {
     font-size: 18px;
+    font-weight: 700;
     color: hsl(213, 96%, 18%);
     @media (max-width: ${MediaSizes.tablet}) {
         margin-top: 0; 
@@ -62,9 +63,9 @@ h3 {
 }
 
 h4 {
-    font-size: 14px;
-    font-weight: 200;
-    color: hsl(213, 96%, 18%);
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--secondary-color);
 }
 
 
@@ -80,19 +81,18 @@ label {
 input {
     height: 42px;
     width: 100%;
-    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 7px;
     border: 1px solid var(--secondary-color);
     padding-left: 20px;
     margin-bottom: 24px;
-    font-weight: 400;
+    &::placeholder {
+        color: var(--secondary-color);
+        opacity: 0.9;
     @media (max-width: ${MediaSizes.desktopSmall}) {
-        margin-bottom: 14px ;
+        margin-bottom: 14px;
         padding-left: 15px;    
     };
-    @media (max-width: ${MediaSizes.mobile}) {
-        height: 33px ;    
-    }
 }
-
-
 `
