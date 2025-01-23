@@ -21,11 +21,8 @@ export const ContainerStep = styled.div`
         text-align: center;     
     };
     @media (max-width: ${MediaSizes.tablet}) {
-        height: 430px;
+        height: 490px;
         padding-top: 30px;
-    };
-    @media (max-width: ${MediaSizes.mobile}) {
-        height: 400px;
     };
 `
 
