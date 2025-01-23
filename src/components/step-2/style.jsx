@@ -21,9 +21,11 @@ export const ContainerStep = styled.div`
         text-align: center;     
     };
     @media (max-width: ${MediaSizes.tablet}) {
-        height: 500px;
+        height: 430px;
         padding-top: 30px;
-        
+    };
+    @media (max-width: ${MediaSizes.mobile}) {
+        height: 400px;
     };
 `
 
@@ -100,12 +102,6 @@ export const DivToggle = styled.div`
     display: flex;
     justify-content: center;
     gap: 12px;
-    @media (max-width: ${MediaSizes.tablet}) {
-        bottom: -180px 
-    };
-    @media (max-width: ${MediaSizes.mobile}) {
-        bottom: -150px 
-    };
 `
 
 export const ButtonToggle = styled.button`
