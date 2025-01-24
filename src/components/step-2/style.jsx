@@ -22,6 +22,7 @@ export const ContainerStep = styled.div`
     };
     @media (max-width: ${MediaSizes.tablet}) {
         height: 490px;
+        width: 90%;
         padding-top: 30px;
     };
 `

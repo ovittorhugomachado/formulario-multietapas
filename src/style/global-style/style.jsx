@@ -56,7 +56,7 @@ h2 {
 h3 {
     font-size: 18px;
     font-weight: 700;
-    color: hsl(213, 96%, 18%);
+    color: var(--primary-color);
     @media (max-width: ${MediaSizes.tablet}) {
         margin-top: 0; 
     };
@@ -68,6 +68,11 @@ h4 {
     color: var(--secondary-color);
 }
 
+h5{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--purple);
+}
 
 label {
     color: var(--primary-color);

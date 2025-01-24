@@ -13,7 +13,7 @@ export const ContainerStep3Component = () => {
                             <AdditionalName>Serviço online</AdditionalName>
                             <NameDescription>Acesso parcial</NameDescription>
                         </DivText>
-                        <PriceAdditional>+1 p/ mês</PriceAdditional>
+                        <PriceAdditional>+R$1 p/ mês</PriceAdditional>
                     </Additional>
                     <Additional>
                     <CheckBox type="checkbox" />

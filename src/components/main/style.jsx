@@ -66,7 +66,9 @@ export const ButtonNext = styled.button`
         margin-right: 10%;
     }
     @media (max-width: ${MediaSizes.tablet}){
-        width: 120px;
+        width: 100px;
+        font-size: 15px;
+        height: 39px
     }
     `
 
@@ -87,5 +89,6 @@ export const ButtonBack = styled.button`
     }
         @media (max-width: ${MediaSizes.tablet}){
         margin-left: 10%;
+        font-size: 15px
     }
     `

@@ -1,48 +1,41 @@
 import styled from "styled-components";
+import { MediaSizes } from "../../style/media-sizes/media-sizes";
 
 export const ContainerStep = styled.div`
     width: 50%;
-    height: 320px;
     background-color: transparent;
     position: absolute;
     top: 75px;
     right: 80px;
-     @media (max-width: 800px) {
+    margin-bottom: 40px;
+    @media (max-width: ${MediaSizes.desktopSmall}) {
         background-color: #fff;
         padding: 40px 30px;
         width: 80%;
-        height: 450px;
+        height: 400px;
         position: absolute;
         top: 100px;
         right: 50%;
         transform: translateX(50%);
         border-radius: 10px;
         text-align: center;     
-    };
-    @media (max-width: 565px) {
+        };
+    @media (max-width: ${MediaSizes.tablet}) {
+        height: 430px;
+        width: 90%;
         padding-top: 30px;
-        
+
+        };
+    @media (max-width: ${MediaSizes.mobile}) {
+        padding-left: 10px;    
+        padding-right: 10px; 
     };
-    @media (max-width: 400px) {
-        height: 450px;
-        width: 90%;   
-        padding: 40px 15px 
-    }
 `
 
 export const Title = styled.h1`
-    color: hsl(213, 96%, 18%);
-     
 `
 
 export const SubTitle = styled.h2`
-    color: hsl(0, 0.80%, 50.60%);
-    font-size: 16px;
-    font-weight: 400;
-    margin: 5px 0 45px;
-    @media (max-width: 800px) {
-        margin: 20px;
-    };
 `
 
 export const DivAdditionals = styled.div`
@@ -50,7 +43,7 @@ export const DivAdditionals = styled.div`
     height: 280px;
     display: flex;
     flex-direction: column;
-     @media (max-width: 400px) {
+    @media (max-width: 400px) {
         height: 250px;
         width: 100%;    
     }
@@ -66,10 +59,10 @@ export const Additional = styled.div`
     align-items: center;
     justify-content: space-between;
     &.active {
-        border-color: hsl(213, 96%, 18%);
-        background-color: hsl(212, 100.00%, 89.90%);
+        border-color: var(--primary-color);
+        background-color: var(--pastel-blue);
         };
-     @media (max-width: 800px) {
+    @media (max-width: ${MediaSizes.mobile}) {
         height:      
     };
    
@@ -99,32 +92,28 @@ export const DivText = styled.div`
     };
 `
 
-export const AdditionalName = styled.h4`
-    font-size: 18px;
-    color: hsl(213, 96%, 18%);
-    @media (max-width: 400px) {
-        text-align: start;  
-        font-size: 16px;  
-    }
+export const AdditionalName = styled.h3`
+    @media (max-width: ${MediaSizes.mobile}) {
+        font-size: 14px;
+    };
+
 `
 
 export const NameDescription = styled.h4`
-    font-size: 18px;
-    color: hsl(0, 0.80%, 50.60%);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
-    @media (max-width: 400px) {
-        text-align: start;  
-        font-size: 15px;  
-    }
+    @media (max-width: ${MediaSizes.mobile}) {
+        font-size: 13px;
+    };3
+
 `
 
 export const PriceAdditional = styled.h5`
-    margin-right: 27px;
-    font-size: 16px;
-    color: #6d64bf;
-    @media (max-width: 450px) {
-        margin-right: 14px;
-    };
+    text-align: end;
+    width: 150px;
+    margin-right: 20px;
+    @media (max-width: ${MediaSizes.mobile}){
+        font-size: 14px;
+    }
     
 `
