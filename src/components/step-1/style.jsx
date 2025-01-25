@@ -43,3 +43,10 @@ export const Input = styled.input`
         border: 1px solid var(--error-color)
     };
 `
+
+export const ErrorMessage = styled.p`
+        color: var(--error-color);
+        font-size: 14px;
+        transform: translateY(-125%)
+    
+`
