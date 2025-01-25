@@ -1,14 +1,14 @@
 import { Main } from './components/main'
 import { Aside } from './components/aside'
 import { Items } from './components/aside/items'
-import { ContainerStep5Component } from './components/step-5'
 import { GlobalStyle } from './style/global-style'
+
 
 function App() {
   
   return (
     <>
-      <GlobalStyle />
+    <GlobalStyle />
       <Main>
         <Aside>
           <Items />
