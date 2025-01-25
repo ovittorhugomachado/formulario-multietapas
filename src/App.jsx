@@ -13,7 +13,6 @@ function App() {
         <Aside>
           <Items />
         </Aside>
-        <ContainerStep5Component />
       </Main>
     </>
   )

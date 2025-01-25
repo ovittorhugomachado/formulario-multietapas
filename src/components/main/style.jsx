@@ -35,16 +35,16 @@ export const Buttons = styled.div`
     position: absolute;
     bottom: 35px;
     right: 80px;
-    @media (max-width: ${MediaSizes.desktopSmall}) {
-        background-color: #fff;
-        position: fixed;
-        width: 100%;
-        bottom: 0px;
-        right: 0;
-    }
-    @media (max-width: ${MediaSizes.tablet}) {
-        height: 60px;
-    }
+        @media (max-width: ${MediaSizes.desktopSmall}) {
+            background-color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            right: 0;
+        }
+        @media (max-width: ${MediaSizes.tablet}) {
+            height: 60px;
+        }
     
     `
 
@@ -54,23 +54,53 @@ export const ButtonNext = styled.button`
     align-self: center;
     background-color: var(--primary-color);
     cursor: pointer;
-    &:hover {
-        opacity: 0.9;
-        };
     color: #fff;
     font-weight: 700;
     font-size: 16px;
     border-radius: 7px;
     border: none;
-    @media (max-width: ${MediaSizes.desktopSmall}){
-        margin-right: 10%;
-    }
-    @media (max-width: ${MediaSizes.tablet}){
-        width: 100px;
-        font-size: 15px;
-        height: 39px
-    }
+        &.disable{
+        display: none;
+        };
+        &:hover {
+        opacity: 0.9;
+        };
+        @media (max-width: ${MediaSizes.desktopSmall}){
+            margin-right: 10%;
+        }
+        @media (max-width: ${MediaSizes.tablet}){
+            width: 100px;
+            font-size: 15px;
+            height: 39px
+        }
     `
+
+    export const ButtonConfirm = styled.button`
+    height: 50px;
+    width:150px;
+    align-self: center;
+    background-color: var(--purple);
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 7px;
+    border: none;
+        &.disable{
+        display: none;
+        };
+        &:hover {
+        opacity: 0.9;
+        };
+        @media (max-width: ${MediaSizes.desktopSmall}){
+            margin-right: 10%;
+        }
+        @media (max-width: ${MediaSizes.tablet}){
+            width: 100px;
+            font-size: 15px;
+            height: 39px
+        }
+    `    
 
 export const ButtonBack = styled.button`
     background-color: #fff;
@@ -81,14 +111,18 @@ export const ButtonBack = styled.button`
     border-radius: 7px;
     border: none;
     margin-left: 50px;
-    &:hover {
-        opacity: 0.6;
-    }
+        &:hover {
+            opacity: 0.6;     
+        }
+        &.disable{
+            opacity: 0;
+            cursor: auto;
+        };
         @media (max-width: ${MediaSizes.desktopSmall}){
-        margin-left: 10%;
-    }
+            margin-left: 10%;
+        }
         @media (max-width: ${MediaSizes.tablet}){
-        margin-left: 10%;
-        font-size: 15px
+            margin-left: 10%;
+            font-size: 15px
     }
     `

@@ -8,10 +8,10 @@ export const InfoSteps = styled.div`
     align-items: center;
     gap: 16px;
     margin-bottom: 20px;
-    @media (max-width: ${MediaSizes.desktopSmall}) {
-      padding: 0;
-      transform: translateY(30px)
-    }
+        @media (max-width: ${MediaSizes.desktopSmall}) {
+            padding: 0;
+            transform: translateY(30px)
+        }
 `
 
 export const NumberItem = styled.div`
@@ -25,14 +25,14 @@ export const NumberItem = styled.div`
     font-size: 16px;
     font-weight: 700;
     color: #fff;
-    @media (max-width:  ${MediaSizes.desktopSmall}) {
-        width: 40px;
-    };
-    &.active {
-        background-color: var(--pastel-blue);
-        border: none;
-        color: var(--primary-color);
-    }
+        @media (max-width:  ${MediaSizes.desktopSmall}) {
+            width: 40px;
+        };
+        &.active {
+            background-color: var(--pastel-blue);
+            border: none;
+            color: var(--primary-color);
+        }
     `
 
 export const Info = styled.div`
@@ -41,21 +41,21 @@ export const Info = styled.div`
     gap: 2px;
     flex-direction: column;
     justify-content: center;
-    @media (max-width:  ${MediaSizes.desktopSmall}) {
-        display: none;
-    }
+        @media (max-width:  ${MediaSizes.desktopSmall}) {
+            display: none;
+        }
     `
 
     export const InfoH3 = styled.h3`
     color:#fff;
-    @media (max-width:  ${MediaSizes.desktopSmall}) {
-        display: none;
-    }
+        @media (max-width:  ${MediaSizes.desktopSmall}) {
+            display: none;
+        }
     `
 
 export const InfoH4 = styled.h4`
-    @media (max-width:  ${MediaSizes.desktopSmall}) {
-        display: none;
-    }
+        @media (max-width:  ${MediaSizes.desktopSmall}) {
+            display: none;
+        }
     `
 

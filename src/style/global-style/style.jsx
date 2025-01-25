@@ -6,7 +6,7 @@ export const Styles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "ubuntu", sans-serif;
+    font-family: "inter", sans-serif;
     font-weight: 300;
     list-style: none;
     font-style: none;
@@ -26,6 +26,13 @@ html {
 body {
   margin: 0 auto;
   background-color: "var(--background-body)";
+}
+
+#root { /*temporario*/
+  background-color: var(--background-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
