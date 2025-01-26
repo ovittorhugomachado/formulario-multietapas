@@ -35,6 +35,10 @@ export const LabelInput = styled.label`
 
 export const Input = styled.input`
     color: var(--primary-color);
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
     @media (max-width: ${MediaSizes.mobile}) {
         height: 36px;
         padding-left: 5px
@@ -50,3 +54,4 @@ export const ErrorMessage = styled.p`
         transform: translateY(-125%)
     
 `
+

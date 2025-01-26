@@ -1,7 +1,9 @@
 import React from "react";
 import { ContainerStep, Title, SubTitle, LabelInput, Input, ErrorMessage } from "./style";
+import ReactInputMask from "react-input-mask";
 
 export const ContainerStep1Component = ({ register, errors }) => {
+
     return (
         <>
             <ContainerStep>
@@ -22,26 +24,28 @@ export const ContainerStep1Component = ({ register, errors }) => {
                     className={errors?.email && "input-error"}
                     type="email"
                     placeholder="Seu e-mail"
-                    {...register("email", {
-                        required: "E-mail é obrigatório",
+                    {...register("email", { 
+                        required: "E-mail é obrigatório", //faz com que o input seja obrigatório
                         pattern: {
                             value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-                            message: "Digite um e-mail válido",
+                            message: "digite um endereço de email válido" //garante que o email digitado está no formato correto                           message: "Digite um e-mail válido",
                         },
                     })}
                 />
                 {errors?.email && <ErrorMessage >{errors.email.message}</ErrorMessage>}
 
                 <LabelInput>Celular</LabelInput>
-                <Input
+                <ReactInputMask
+                    style={{ color: "var(--primary-color)", fontSize: "15px"}}
+                    mask="(99) 99999-9999"
+                    maskChar={null}  // Remove os caracteres de máscara ao digitar
+                    placeholder="(99) 99999-9999"
                     className={errors?.number && "input-error"}
-                    type="number"
-                    placeholder="Celular"
                     {...register("number", {
                         required: "Celular é obrigatório",
-                        minLength: {
-                            value: 11,
-                            message: "O celular precisa ter 11 números",
+                        pattern: {
+                            value: /^\(\d{2}\) \d{5}-\d{4}$/,
+                            message: "Formato inválido. Use (99) 99999-9999",
                         },
                     })}
                 />
