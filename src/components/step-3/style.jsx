@@ -60,11 +60,9 @@ export const Additional = styled.div`
     justify-content: space-between;
     &.active {
         border-color: var(--primary-color);
-        background-color: var(--pastel-blue);
+        background-color:  hsl(212, 100.00%, 89.90%);
         };
-    @media (max-width: ${MediaSizes.mobile}) {
-        height:      
-    };
+
    
 
 `

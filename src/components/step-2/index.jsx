@@ -1,6 +1,6 @@
 import { DivPlans, Plan, PricePlan, ContainerStep, SubTitle, Title, NamePlan, ButtonToggle, DivToggle, TextToggle, TextPlan } from "./style";
 import { paymentContext, selectPayment } from "../contexts/paymentContext";
-import { planContext, plans } from "../contexts/planContext";
+import { planContext } from "../contexts/planContext";
 
 import { useContext } from "react";
 
