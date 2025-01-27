@@ -8,7 +8,7 @@ import { ContainerStep5Component } from "../step-5";
 export const StepContext = createContext();
 
 export const StepProvider = ({ children }) => {
-    const [currentStep, SetCurrentStep] = useState(0);
+    const [currentStep, SetCurrentStep] = useState(1);
 
     const steps = [
             <ContainerStep1Component key={0} />,

@@ -1,12 +1,16 @@
 import { DivPlans, Plan, PricePlan, ContainerStep, SubTitle, Title, NamePlan, ButtonToggle, DivToggle, TextToggle, TextPlan } from "./style";
-import { useState } from "react";
+import { paymentContext, selectPayment } from "../contexts/paymentContext";
+
+import { useContext } from "react";
 
 export const ContainerStep2Component = () => {
-    {/*const [isActive, set] = useState(false);
+    console.log(DivPlans)
+    const handleClick = () => {
+        changePayment();
+    };
 
-    const handleToggle = () => {
-        setIsactive((prev) => !prev);
-    };*/}//Não sei se vai precisar
+    const {selectedPayment, changePayment} = useContext(paymentContext);
+
 
     return (
         <>
@@ -14,32 +18,32 @@ export const ContainerStep2Component = () => {
                 <Title>Selecione seu plano</Title>
                 <SubTitle>Você tem a opção de cobrança mensal ou anual</SubTitle>
                 <DivPlans>
-                    <Plan>
+                    <Plan key={0}>
                         <img src="/icon-arcade.svg" alt="" />
                         <TextPlan>
                             <NamePlan>Arcade</NamePlan>
-                            <PricePlan>R$10 p/ mês</PricePlan>
+                            <PricePlan>{selectedPayment.plans.arcade}</PricePlan>
                         </TextPlan>
                     </Plan>
-                    <Plan>
+                    <Plan key={1}>
                         <img src="/icon-advanced.svg" alt="" />
                         <TextPlan>
                             <NamePlan>Advanced</NamePlan>
-                            <PricePlan>R$20 p/ mês</PricePlan>
+                            <PricePlan>{selectedPayment.plans.advanced}</PricePlan>
                         </TextPlan>
-                    </Plan>
-                    <Plan className="active"> {/*classname teste */}
+                    </Plan >
+                    <Plan key={2} className="active"> {/*classname teste */}
                         <img src="/icon-pro.svg" alt="" />
                         <TextPlan>
                             <NamePlan>Pro</NamePlan>
-                            <PricePlan>R$30 p/ mês</PricePlan>
+                            <PricePlan>{selectedPayment.plans.pro}</PricePlan>
                         </TextPlan>
 
                     </Plan>
                     <DivToggle>
-                        <TextToggle $isActive>Por mês</TextToggle>
-                        <ButtonToggle />
-                        <TextToggle>Por ano</TextToggle>
+                        <TextToggle className={selectedPayment === selectPayment.month ? "active" : ""}>Por mês</TextToggle>
+                        <ButtonToggle selectedPayment={selectedPayment} onClick={handleClick}/>
+                        <TextToggle className={selectedPayment === selectPayment.year ? "active" : ""}>Por ano</TextToggle>
                     </DivToggle>
                 </DivPlans>
 

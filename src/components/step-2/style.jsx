@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MediaSizes } from "../../style/media-sizes/media-sizes";
+import { selectPayment } from "../contexts/paymentContext";
 
 export const ContainerStep = styled.div`
     width: 50%;
@@ -56,6 +57,7 @@ export const Plan = styled.div`
     margin: 0 6px;
     border-radius: 10px;
     padding: 18px;
+    cursor: pointer;
     &.active {
         border-color: hsl(213, 96%, 18%);
         background-color: hsl(212, 100.00%, 89.90%);
@@ -121,13 +123,16 @@ export const ButtonToggle = styled.button`
         height: 15px;
         border-radius: 50%;
         background: white;
-        top: 50%;
-        left: ${(props) => (props.$isActive ? "calc(100% - 20px)" : "3px")};
-        transform: translateY(-50%);
+        top: 10%;
+        left: ${({selectedPayment}) => selectedPayment.positionXButton};
         transition: left 0.3s ease;
     }
-`;
+`
 
 export const TextToggle = styled.h3`
-    color: ${(props) => (props.$isActive ? "hsl(213, 96%, 18%)" : "hsl(0, 1.60%, 74.90%)")};
+    color: var(--secondary-color);
+    transition: left 0.3s ease;
+    &.active {
+        color: var(--primary-color)
+    }
 `;

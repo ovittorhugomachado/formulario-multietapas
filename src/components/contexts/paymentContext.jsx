@@ -6,6 +6,7 @@ export const paymentContext = createContext();
 // Dados dos planos de pagamento
 export const selectPayment = {
     month: {
+        positionXButton: "3px",
         plans: {
             arcade: "R$ 9/mês",
             advanced: "R$ 12/mês",
@@ -18,6 +19,8 @@ export const selectPayment = {
         }
     },
     year: {
+        positionXButton: "24px",
+        positionButton: "80px",
         plans: {
             arcade: "R$ 90/ano",
             advanced: "R$ 120/ano",
@@ -35,7 +38,7 @@ export const selectPayment = {
 export const PaymentProvider = ({ children }) => {
     // Inicializa o estado com o plano mensal
     const [selectedPayment, setSelectedPayment] = useState(selectPayment.month);
-
+    
     // Função para alternar entre mensal e anual
     const changePayment = () => {
         setSelectedPayment(selectedPayment === selectPayment.month ? selectPayment.year : selectPayment.month);
