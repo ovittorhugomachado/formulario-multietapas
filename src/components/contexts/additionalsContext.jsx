@@ -7,12 +7,12 @@ export const AdditionalsProvider = ({ children }) => {
 
     const [additionals, setAdditionals] = useState([]);
 
-    const addOrRemove = (index) => {
+    const addOrRemove = (name) => {
         setAdditionals((e) => {
-            if (e.includes(index)){
-                return e.filter(divIndex => divIndex !== index)
+            if (e.includes(name)){
+                return e.filter(divIndex => divIndex !== name)
             }else {
-                return [...e, index];
+                return [...e, name];
               }
         });
       };

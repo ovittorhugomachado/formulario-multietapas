@@ -18,7 +18,6 @@ export const Main = ({ children }) => {
     } = useForm();
 
     const onSubmit = (data) => {
-        console.log("Form data:", data);
         nextStep(); // Avança se os dados forem válidos
     };
 
@@ -30,7 +29,6 @@ export const Main = ({ children }) => {
         <ContainerStep4Component key={3} register={register} errors={errors} />,
         <ContainerStep5Component key={4} register={register} errors={errors} />,
     ]
-    console.log(currentStep)
     return (
 
         <>

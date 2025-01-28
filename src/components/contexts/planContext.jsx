@@ -4,11 +4,11 @@ import { createContext, useState } from "react";
 export const planContext = createContext();
 
 // Dados dos planos de pagamento
-export const plans = {
-            arcade: "R$ 9/mês",
-            advanced: "R$ 12/mês",
-            pro: "R$ 15/mês",
-        }
+// export const plans = {
+//             arcade: "R$ 9/mês",
+//             advanced: "R$ 12/mês",
+//             pro: "R$ 15/mês",
+//         }
 
 // Provedor do Contexto para fornecer os dados de pagamento
 export const PlanProvider = ({ children }) => {

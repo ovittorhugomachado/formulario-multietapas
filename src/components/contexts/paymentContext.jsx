@@ -6,11 +6,20 @@ export const paymentContext = createContext();
 // Dados dos planos de pagamento
 export const selectPayment = {
     month: {
-        positionXButton: "3px",
+        positionXButton: '3px',
         plans: {
-            arcade: "R$ 9/mês",
-            advanced: "R$ 12/mês",
-            pro: "R$ 15/mês",
+            arcade:{
+                name: 'arcade',
+                price: 'R$ 9/mês'
+            },
+            advanced: {
+                name: 'advanced',
+                price: 'R$ 12/mês'
+            },
+            pro: {
+                name: 'pro',
+                price: 'R$ 15/mês'
+            }
         },
         additionals: {
             onlineServices: "R$ 1/mês",
@@ -22,9 +31,18 @@ export const selectPayment = {
         positionXButton: "24px",
         positionButton: "80px",
         plans: {
-            arcade: "R$ 90/ano",
-            advanced: "R$ 120/ano",
-            pro: "R$ 150/ano",
+            arcade:{
+                name: 'arcade',
+                price: 'R$ 90/mês'
+            },
+            advanced: {
+                name: 'advanced',
+                price: 'R$ 120/mês'
+            },
+            pro: {
+                name: 'pro',
+                price: 'R$ 150/mês'
+            }
         },
         additionals: {
             onlineServices: "R$ 10/ano",

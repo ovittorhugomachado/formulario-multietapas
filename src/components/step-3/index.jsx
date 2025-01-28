@@ -29,6 +29,8 @@ export const ContainerStep3Component = () => {
         },
     ];
     
+    console.log(additionals)
+
     return (
         <ContainerStep>
             <Title>Adicionais</Title>
@@ -36,14 +38,14 @@ export const ContainerStep3Component = () => {
             <DivAdditionals>
                 {additionalsList.map((additional) => (
                     <Additional
-                        key={additional.id}
-                        onClick={() => addOrRemove(additional.id)} // Chama a função passando o ID
-                        className={additionals.includes(additional.id) ? "active" : ""} // Adiciona classe "active" se estiver selecionado
+                        key={additional.name}
+                        onClick={() => addOrRemove(additional.name)} // Chama a função passando o name
+                        className={additionals.includes(additional.name) ? "active" : ""} // Adiciona classe "active" se estiver selecionado
                     >
                         
                         <CheckBox
                             type="checkbox"
-                            checked={additionals.includes(additional.id)} // Controla o estado do checkbox
+                            checked={additionals.includes(additional.name)} // Controla o estado do checkbox
                             readOnly // Evita warnings no React
                         />
                         <DivText>
