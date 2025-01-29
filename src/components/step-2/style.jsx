@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MediaSizes } from "../../style/media-sizes/media-sizes";
-import { selectPayment } from "../contexts/paymentContext";
+
+
 
 export const ContainerStep = styled.div`
     width: 50%;
@@ -51,6 +52,7 @@ export const DivPlans = styled.div`
 `
 
 export const Plan = styled.div`
+    text-align: start;
     width: 150px;
     height: 100%;
     border: 1px solid hsl(0, 1.60%, 74.90%);
@@ -67,14 +69,15 @@ export const Plan = styled.div`
     };
     @media (max-width: ${MediaSizes.tablet}) {
         width: 100%;
-        height: 75px;
+        height: 85px;
         margin-bottom: 10px; 
         display: flex; 
-        justify-content: start;
+        text-align: start;
     };
 `
 
 export const TextPlan = styled.div`
+
     width: 100%;
     @media (max-width: 565px) {
         width: 50%; 
@@ -124,8 +127,8 @@ export const ButtonToggle = styled.button`
         border-radius: 50%;
         background: white;
         top: 10%;
-        left: ${({selectedPayment}) => selectedPayment.positionXButton};
-        transition: left 0.3s ease;
+        left: ${({prop}) => prop.positionXButton};
+        transition: 0.4s ease;
     }
 `
 

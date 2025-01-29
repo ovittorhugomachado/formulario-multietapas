@@ -65,7 +65,7 @@ export const PlanPrice = styled.h5`
     font-size: 20px
 `
 
-export const Items = styled.h2`
+export const Item = styled.h2`
     color: var(--secondary-color);
     font-size: 18px;
     font-weight: 400;

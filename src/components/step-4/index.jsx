@@ -1,15 +1,17 @@
-import { ChangePlan, ContainerStep, PlanFinish, PlanName, SubTitle, Title, Total, Text, PlanPrice, Items, PriceItem, PriceTotal } from "./style"
-import { useContext } from "react";
-import { AdditionalsContext } from "../contexts/additionalsContext";
-import { paymentContext } from "../contexts/paymentContext";
-import { planContext } from "../contexts/planContext";
+import { ChangePlan, ContainerStep, PlanFinish, PlanName, SubTitle, Title, Total, Text, PlanPrice, Item, PriceItem, PriceTotal } from "./style"
+import { useContext } from "react"
+import { PaymentContext } from "../contexts/paymentContext"
+import { PlanContext } from "../contexts/planContext"
+import { Additional } from "../step-3/style"
 
 export const ContainerStep4Component = () => {
 
-    const { selectedPayment, changePayment } = useContext(paymentContext);
-    console.log(selectedPayment)
+const { payment, listAdditionals, setListAdditionals, addAdditional } = useContext(PaymentContext)
+const { plan, setPlan } = useContext(PlanContext)
 
-    const { selectedPlan, handlePlan } = useContext(planContext)
+
+
+console.log(Additional.key)
     return (
         <>
             <ContainerStep>
@@ -17,15 +19,23 @@ export const ContainerStep4Component = () => {
                 <SubTitle>Confira abaixo o resumo detalhado das suas assinaturas</SubTitle>
                 <PlanFinish>
                     <Text>
-                        <PlanName>{selectedPlan}</PlanName>
+                        <PlanName>{payment.plans[plan].name}</PlanName>
                         <ChangePlan>trocar plano</ChangePlan>
                     </Text>
-                    <PlanPrice>{selectedPlan.price}</PlanPrice>
+                    <PlanPrice>{payment.plans[plan].price}</PlanPrice>
 
                 </PlanFinish>
+                    {listAdditionals.map((i) => (
+                        <Item>
+                        {i}
+                        <PriceItem></PriceItem>
+                    </Item>
+                    ))}
+                    <Item>
 
-                <Items>Serviço online<PriceItem>+R$ 1/mês</PriceItem></Items>
-                <Items>Serviço online<PriceItem>+R$ 1/mês</PriceItem></Items>
+                        <PriceItem> ss</PriceItem>
+                    </Item>
+    
 
                 <Total>Total (por mês)<PriceTotal>R$ 12/mês</PriceTotal></Total>
 

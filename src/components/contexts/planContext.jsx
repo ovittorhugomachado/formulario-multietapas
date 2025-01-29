@@ -1,28 +1,23 @@
-import { createContext, useState } from "react";
+import { useState, createContext } from "react";
 
-// Criando o contexto global para o pagamento
-export const planContext = createContext();
+export const PlanContext = createContext()
 
-// Dados dos planos de pagamento
-// export const plans = {
-//             arcade: "R$ 9/mês",
-//             advanced: "R$ 12/mês",
-//             pro: "R$ 15/mês",
-//         }
 
-// Provedor do Contexto para fornecer os dados de pagamento
-export const PlanProvider = ({ children }) => {
-    // Inicializa o estado com o plano mensal
-    const [selectedPlan, setSelectedPlan] = useState(null);
+
+
+
+export const PlanProvider = ({children}) => {
     
-    // Função para alternar entre mensal e anual
-    const handlePlan = (index) => {
-        setSelectedPlan(index);
-    };
+    const [ plan, setPlan] = useState(" ")
+
+    const changePlan = (name) => {
+        setPlan(name)
+    }
 
     return (
-        <planContext.Provider value={{ selectedPlan, setSelectedPlan, handlePlan }}>
+        <PlanContext.Provider value={{plan, setPlan, changePlan}}>
             {children}
-        </planContext.Provider>
-    );
-};
+
+        </PlanContext.Provider>
+    )
+}       

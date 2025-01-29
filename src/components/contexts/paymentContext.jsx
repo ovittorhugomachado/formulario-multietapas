@@ -1,70 +1,123 @@
 import { createContext, useState } from "react";
 
-// Criando o contexto global para o pagamento
-export const paymentContext = createContext();
+export const PaymentContext = createContext()
 
-// Dados dos planos de pagamento
-export const selectPayment = {
+
+export const plans = {
     month: {
+        name: 'month',
         positionXButton: '3px',
-        plans: {
-            arcade:{
-                name: 'arcade',
+        plans: [
+            {
+                key: 0,
+                image: '/icon-arcade.svg',
+                name: 'Arcade',
                 price: 'R$ 9/mês'
             },
-            advanced: {
-                name: 'advanced',
+            {
+                key: 1,
+                image: '/icon-advanced.svg',
+                name: 'Advanced',
                 price: 'R$ 12/mês'
             },
-            pro: {
-                name: 'pro',
+            {   
+                key: 2,
+                image: '/icon-pro.svg',
+                name: 'Pro',
                 price: 'R$ 15/mês'
             }
-        },
-        additionals: {
-            onlineServices: "R$ 1/mês",
-            largerStorage: "R$ 2/mês",
-            customizableProfile: "R$ 2/mês"
-        }
+        ],
+        additionals: [
+            {
+                key: 0,
+                name: "Serviços online",
+                price: "+R$ 1/mês",
+                description: "Jogue multiplayer"
+            },
+            {
+                key: 1,
+                name: "Mais espaço",
+                price: "+R$ 2/mês",
+                description: "1TB extra na nuvem"
+            },
+            {
+                key: 2,
+                name: "Perfil personalizado",
+                price: "+R$ 2/mês",
+                description: "Customize seu perfil"
+            }
+        ]
     },
     year: {
-        positionXButton: "24px",
-        positionButton: "80px",
-        plans: {
-            arcade:{
-                name: 'arcade',
-                price: 'R$ 90/mês'
+        name: 'year',
+        positionXButton: '23px',
+        plans: [
+            {
+                key: 0,
+                image: '/icon-arcade.svg',
+                name: 'Arcade',
+                price: 'R$ 90/ano'
             },
-            advanced: {
-                name: 'advanced',
-                price: 'R$ 120/mês'
+            {
+                key: 1,
+                image: '/icon-advanced.svg',
+                name: 'Advanced',
+                price: 'R$ 120/ano'
             },
-            pro: {
-                name: 'pro',
-                price: 'R$ 150/mês'
+            {
+                key: 2,
+                image: '/icon-pro.svg',
+                name: 'Pro',
+                price: 'R$ 150/ano'
             }
-        },
-        additionals: {
-            onlineServices: "R$ 10/ano",
-            largerStorage: "R$ 20/ano",
-            customizableProfile: "R$ 20/ano",
-        }
+        ],
+        additionals: [
+            {
+                key: 0,
+                name: "Serviços online",
+                price: "+R$ 10/ano",
+                description: "Jogue multiplayer"
+            },
+            {
+                key: 1,
+                name: "Mais espaço",
+                price: "+R$ 20/ano",
+                description: "1TB extra na nuvem"
+            },
+            {
+                key: 2,
+                name: "Perfil personalizado",
+                price: "+R$ 20/ano",
+                description: "Customize seu perfil"
+            }
+        ]
     }
 };
 
-// Provedor do Contexto para fornecer os dados de pagamento
-export const PaymentProvider = ({ children }) => {
-    // Inicializa o estado com o plano mensal
-    const [selectedPayment, setSelectedPayment] = useState(selectPayment.month);
-    
-    // Função para alternar entre mensal e anual
+export const PaymentProvider = ({children}) => {
+
+    const [ payment, setPayment] = useState(plans.month)
+
+
+    const [ listAdditionals, setListAdditionals] = useState([])
+
     const changePayment = () => {
-        setSelectedPayment(selectedPayment === selectPayment.month ? selectPayment.year : selectPayment.month);
-    };
+        setPayment((prevPlan) => prevPlan === plans.month ? plans.year : plans.month)
+    }
+
+    const addAdditional = (name) => {
+        setListAdditionals((e) => {
+            if(e.includes(name)){
+                return e.filter(divName => divName !== name)
+            }else {
+                return [...e, name]
+            }
+        })
+    }
 
     return (
-        <paymentContext.Provider value={{ selectedPayment, setSelectedPayment, changePayment }}>
+        <PaymentContext.Provider value={{payment, setPayment, changePayment, listAdditionals, setListAdditionals, addAdditional}}>
             {children}
-        </paymentContext.Provider>
-    );
-};
+        </PaymentContext.Provider>
+    )
+}

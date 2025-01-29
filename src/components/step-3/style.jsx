@@ -12,7 +12,6 @@ export const ContainerStep = styled.div`
         background-color: #fff;
         padding: 40px 30px;
         width: 80%;
-        height: 400px;
         position: absolute;
         top: 100px;
         right: 50%;
@@ -21,7 +20,6 @@ export const ContainerStep = styled.div`
         text-align: center;     
         };
     @media (max-width: ${MediaSizes.tablet}) {
-        height: 430px;
         width: 90%;
         padding-top: 30px;
 
@@ -52,12 +50,12 @@ export const DivAdditionals = styled.div`
 export const Additional = styled.div`
     width: 100%;
     border: 1px solid hsl(0, 1.60%, 74.90%);
-    flex: 1;
     margin-bottom: 12px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
     &.active {
         border-color: var(--primary-color);
         background-color:  hsl(212, 100.00%, 89.90%);
@@ -71,7 +69,7 @@ export const CheckBox = styled.input`
     width: 25px;
     height: 25px;
     margin: 30px;
-    @media (max-width: 800px) {
+    @media (max-width: ${MediaSizes.desktopSmall}) {
         margin: 20px;
     };
     
@@ -84,13 +82,18 @@ export const DivText = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 4px;
+    padding: 15px 0;
     transform: translatex(-8px);
-    @media (max-width: 800px) {
-        align-items: start;
+    @media (max-width: ${MediaSizes.tablet}) {
+        padding: 5px;
     };
 `
 
 export const AdditionalName = styled.h3`
+    text-align: start;
+    @media (max-width: ${MediaSizes.tablet}) {
+        font-size: 16px;
+    };
     @media (max-width: ${MediaSizes.mobile}) {
         font-size: 14px;
     };
@@ -98,8 +101,12 @@ export const AdditionalName = styled.h3`
 `
 
 export const NameDescription = styled.h4`
+    text-align: start;
     font-size: 15px;
     font-weight: 400;
+     @media (max-width: ${MediaSizes.tablet}) {
+        font-size: 14px;
+    };
     @media (max-width: ${MediaSizes.mobile}) {
         font-size: 13px;
     };3
@@ -108,10 +115,11 @@ export const NameDescription = styled.h4`
 
 export const PriceAdditional = styled.h5`
     text-align: end;
-    width: 150px;
+    width: 123px;
     margin-right: 20px;
     @media (max-width: ${MediaSizes.mobile}){
         font-size: 14px;
+        margin-right: 10px;
     }
     
 `
