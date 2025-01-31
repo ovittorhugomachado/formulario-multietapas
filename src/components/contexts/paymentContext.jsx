@@ -5,89 +5,103 @@ export const PaymentContext = createContext()
 
 export const plans = {
     month: {
-        name: 'month',
+        name: 'mensal',
         positionXButton: '3px',
+        suffix: "/mês",
         plans: [
             {
                 key: 0,
                 image: '/icon-arcade.svg',
                 name: 'Arcade',
-                price: 'R$ 9/mês'
+                price: 9,
+                payment: '/mês'
             },
             {
                 key: 1,
                 image: '/icon-advanced.svg',
                 name: 'Advanced',
-                price: 'R$ 12/mês'
+                price: 12,
+                payment: '/mês'
             },
             {   
                 key: 2,
                 image: '/icon-pro.svg',
                 name: 'Pro',
-                price: 'R$ 15/mês'
+                price: 15,
+                payment: '/mês'
             }
         ],
         additionals: [
             {
                 key: 0,
                 name: "Serviços online",
-                price: "+R$ 1/mês",
+                price: 1,
+                payment: '/mês',
                 description: "Jogue multiplayer"
             },
             {
                 key: 1,
                 name: "Mais espaço",
-                price: "+R$ 2/mês",
+                price: 2,
+                payment: '/mês',
                 description: "1TB extra na nuvem"
             },
             {
                 key: 2,
                 name: "Perfil personalizado",
-                price: "+R$ 2/mês",
+                price: 2,
+                payment: '/mês',
                 description: "Customize seu perfil"
             }
         ]
     },
     year: {
-        name: 'year',
+        name: 'anual',
         positionXButton: '23px',
+        suffix: "/ano",
         plans: [
             {
                 key: 0,
                 image: '/icon-arcade.svg',
                 name: 'Arcade',
-                price: 'R$ 90/ano'
+                price: 90,
+                payment: '/ano'
             },
             {
                 key: 1,
                 image: '/icon-advanced.svg',
                 name: 'Advanced',
-                price: 'R$ 120/ano'
+                price: 120,
+                payment: '/ano'
             },
             {
                 key: 2,
                 image: '/icon-pro.svg',
                 name: 'Pro',
-                price: 'R$ 150/ano'
+                price: 150,
+                payment: '/ano'
             }
         ],
         additionals: [
             {
                 key: 0,
                 name: "Serviços online",
-                price: "+R$ 10/ano",
+                price: 10,
+                payment: '/ano',
                 description: "Jogue multiplayer"
             },
             {
                 key: 1,
                 name: "Mais espaço",
-                price: "+R$ 20/ano",
+                price: 20,
+                payment: '/ano',
                 description: "1TB extra na nuvem"
             },
             {
                 key: 2,
                 name: "Perfil personalizado",
-                price: "+R$ 20/ano",
+                price: 20,
+                payment: '/ano',
                 description: "Customize seu perfil"
             }
         ]
@@ -100,6 +114,8 @@ export const PaymentProvider = ({children}) => {
 
 
     const [ listAdditionals, setListAdditionals] = useState([])
+
+    console.log(payment)
 
     const changePayment = () => {
         setPayment((prevPlan) => prevPlan === plans.month ? plans.year : plans.month)

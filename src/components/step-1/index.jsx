@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ContainerStep, Title, SubTitle, LabelInput, Input, ErrorMessage } from "./style";
 import ReactInputMask from "react-input-mask";
 

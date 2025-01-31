@@ -1,17 +1,22 @@
-import { DivPlans, Plan, PricePlan, ContainerStep, SubTitle, Title, NamePlan, ButtonToggle, DivToggle, TextToggle, TextPlan } from "./style";
+import { DivPlans, Plan, PricePlan, ContainerStep, SubTitle, Title, NamePlan, ButtonToggle, DivToggle, TextToggle, TextPlan, Radio, ErrorMessage } from "./style";
 import { PaymentContext } from "../contexts/paymentContext";
 import { PlanContext } from "../contexts/planContext";
 import { useContext } from "react";
-import { PlanName } from "../step-4/style";
+import { useForm } from "react-hook-form";
+import { plans } from "../contexts/paymentContext";
 
-export const ContainerStep2Component = () => {
+export const ContainerStep2Component = ({register, errors, clearErrors }) => {
 
     const { payment, changePayment } = useContext(PaymentContext)
 
-    const { plan, setPlan } = useContext(PlanContext)
+    const { plan, changePlan } = useContext(PlanContext)
 
     const plans = payment.plans
 
+
+    console.log(payment.name)
+
+    console.log(`pagemento tipo: ${payment.name} planio selecionado: ${plans}`)
     return (
         <>
             <ContainerStep>
@@ -20,24 +25,37 @@ export const ContainerStep2Component = () => {
                 <DivPlans>
                     {plans.map((i) => (
                         <Plan
-                            key={plans}
-                            onClick={() => setPlan(i.key)}
-                            className={i.key === plan ? 'active' : ''}
+                            key={i.key}
+                            onClick={() => {
+                                changePlan(i.key);
+                                clearErrors('plan')
+                            }}
+                            className={plan == i.key ? 'active' : ''}
                         >
                             <img src={i.image} alt="" />
                             <TextPlan>
                                 <NamePlan>{i.name}</NamePlan>
-                                <PricePlan>{i.price}</PricePlan>
+                                <PricePlan>R$ {i.price + payment.suffix}</PricePlan>
                             </TextPlan>
+
+                            <Radio 
+                            type="radio"
+                            value={i.key}
+                            checked={plan === i.key} // Mantém sempre selecionado o estado atual
+                            {...register("plan", { required: "Selecione um plano!" })}
+                            />
 
                         </Plan>
                     ))}
+                    {errors.plan && <ErrorMessage style={{ color: "red" }}>{errors.plan.message}</ErrorMessage>}
                     <DivToggle>
-                        <TextToggle className={payment.name === "month" ? "active" : ""}>Por mês</TextToggle>
+                        <TextToggle className={payment.name === "mensal" ? "active" : ""}>Por mês</TextToggle>
                         <ButtonToggle prop={payment} onClick={changePayment} />
-                        <TextToggle className={payment.name === "year" ? "active" : ""}>Por ano</TextToggle>
+                        <TextToggle className={payment.name === "anual" ? "active" : ""}>Por ano</TextToggle>
                     </DivToggle>
+                    {errors.plan && <ErrorMessage style={{ color: "red" }}>{errors.plan.message}</ErrorMessage>}
                 </DivPlans>
+                
             </ContainerStep>
         </>
     )

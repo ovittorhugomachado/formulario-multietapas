@@ -1,18 +1,21 @@
 import { useState, createContext } from "react";
+import { useContext } from "react";
+import { PaymentContext } from "./paymentContext";
 
 export const PlanContext = createContext()
 
 
-
-
-
 export const PlanProvider = ({children}) => {
     
-    const [ plan, setPlan] = useState(" ")
-
-    const changePlan = (name) => {
-        setPlan(name)
+    
+    const { payment } = useContext(PaymentContext)
+    const [ plan, setPlan] = useState()
+    console.log(payment.plans[0])
+    const changePlan = (i) => {
+        setPlan(payment.plans[i].key)
     }
+
+
 
     return (
         <PlanContext.Provider value={{plan, setPlan, changePlan}}>

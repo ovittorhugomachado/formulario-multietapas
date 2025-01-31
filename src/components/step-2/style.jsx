@@ -76,6 +76,13 @@ export const Plan = styled.div`
     };
 `
 
+export const Radio = styled.input`
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0
+`
+
 export const TextPlan = styled.div`
 
     width: 100%;
@@ -127,7 +134,7 @@ export const ButtonToggle = styled.button`
         border-radius: 50%;
         background: white;
         top: 10%;
-        left: ${({prop}) => prop.positionXButton};
+        left: ${({ prop }) => prop.positionXButton};
         transition: 0.4s ease;
     }
 `
@@ -139,3 +146,15 @@ export const TextToggle = styled.h3`
         color: var(--primary-color)
     }
 `;
+
+export const ErrorMessage = styled.p`
+    color: var(--error-color);
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: -50px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;      
+`
