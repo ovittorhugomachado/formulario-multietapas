@@ -23,5 +23,5 @@
 - **Boas Práticas de Código**: Uso de tags semânticas para melhor estruturação da página.
 
 ## 🎨 Design da Página
-<img src="/gifs/design-desktop.gif" height="300px" width="780px">           <img src="/gifs/design-mobile.gif" height="370px">
+<img src="/gifs/design-desktop.gif" width="780px">           <img src="/gifs/design-mobile.gif" height="370px">
 
