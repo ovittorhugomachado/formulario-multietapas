@@ -15,7 +15,8 @@ export const Main = ({ children }) => { //cria o componente
         register,
         handleSubmit,
         formState: { errors },
-        clearErrors
+        clearErrors, 
+        setValue
     } = useForm(); //importa esse métodos do react hook form
     
 
@@ -25,7 +26,7 @@ export const Main = ({ children }) => { //cria o componente
 
     // Definir os steps e repassar as props corretamente
     const steps = [ //array que contém os componentes
-        <ContainerStep1Component key={0} register={register} errors={errors} />,
+        <ContainerStep1Component key={0} register={register} errors={errors} setValue={setValue} />,
         <ContainerStep2Component key={1} register={register} errors={errors} clearErrors={clearErrors}/>,
         <ContainerStep3Component key={2} register={register} errors={errors} />,
         <ContainerStep4Component key={3} register={register} errors={errors} />,
