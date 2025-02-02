@@ -3,9 +3,11 @@ import { useContext } from "react"
 import { PaymentContext } from "../contexts/paymentContext"
 import { PlanContext } from "../contexts/planContext"
 import { AdditionalsContext } from "../contexts/additionalsContext"
+import { StepContext } from "../contexts/stepContext"
 
 export const ContainerStep4Component = () => {
 
+const { changePlan } = useContext(StepContext)
 const { payment } = useContext(PaymentContext)
 const { plan } = useContext(PlanContext)
 const { additionals } = useContext(AdditionalsContext)
@@ -27,7 +29,7 @@ console.log(payment.payment)
                 <PlanFinish>
                     <Text>
                         <PlanName>{payment.plans[plan].name}</PlanName>
-                        <ChangePlan>trocar plano</ChangePlan>
+                        <ChangePlan onClick={() => changePlan()}>trocar plano</ChangePlan>
                     </Text>
                     <PlanPrice>R$ {payment.plans[plan].price + payment.suffix}</PlanPrice>
 

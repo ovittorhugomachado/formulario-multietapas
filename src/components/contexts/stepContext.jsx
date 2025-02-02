@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const StepContext = createContext();
 
 export const StepProvider = ({ children }) => {
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(0);
 
     const nextStep = () => {
         if (currentStep < 4) {
@@ -17,8 +17,12 @@ export const StepProvider = ({ children }) => {
         }
     };
 
+    const changePlan = () => {
+        setCurrentStep(1)
+    }
+
     return (
-        <StepContext.Provider value={{ currentStep, nextStep, prevStep }}>
+        <StepContext.Provider value={{ currentStep, nextStep, prevStep, changePlan }}>
             {children}
         </StepContext.Provider>
     );

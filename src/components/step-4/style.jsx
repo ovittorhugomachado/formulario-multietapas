@@ -49,6 +49,7 @@ export const Text = styled.div`
     text-align: start;
 `
 export const PlanName = styled.h3`
+    font-size: 20px
 `
 export const ChangePlan = styled.a`
     color: var(--secondary-color);;
@@ -56,8 +57,8 @@ export const ChangePlan = styled.a`
     font-size: 18px;
     transition: 0.2s;
     &:hover{
-        border-bottom: 1px solid color: var(--secondary-color);;
-        color: color: var(--secondary-color);
+        text-decoration: underline;
+        color: var(--purple);
     }
 `
 export const PlanPrice = styled.h5`
