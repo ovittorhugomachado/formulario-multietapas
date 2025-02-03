@@ -34,11 +34,6 @@ export const LabelInput = styled.label`
 `
 
 export const Input = styled.input`
-    color: var(--primary-color);
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-    }
     @media (max-width: ${MediaSizes.mobile}) {
         height: 36px;
         padding-left: 5px
@@ -46,6 +41,10 @@ export const Input = styled.input`
     &.input-error {
         border: 1px solid var(--error-color)
     };
+`
+
+export const DivInput = styled.div`
+    
 `
 
 export const ErrorMessage = styled.p`

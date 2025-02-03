@@ -1,6 +1,6 @@
 import { Container, Buttons, ButtonNext, ButtonConfirm, ButtonBack } from "./style";
 import { useContext } from "react";
-import { StepContext } from "../contexts/stepContext";
+import { StepContext } from "../../contexts/stepContext";
 import { useForm } from "react-hook-form";
 import { ContainerStep1Component } from "../step-1";
 import { ContainerStep2Component } from "../step-2";
@@ -8,25 +8,25 @@ import { ContainerStep3Component } from "../step-3";
 import { ContainerStep4Component } from "../step-4";
 import { ContainerStep5Component } from "../step-5";
 
-export const Main = ({ children }) => { //cria o componente
-    const { currentStep, nextStep, prevStep } = useContext(StepContext); //imorta do stepcontext
+export const Main = ({ children }) => { 
+
+    const { currentStep, nextStep, prevStep } = useContext(StepContext);
 
     const {
         register,
         handleSubmit,
         formState: { errors },
-        clearErrors, 
-        setValue
-    } = useForm(); //importa esse métodos do react hook form
-    
+        clearErrors,
+        control
+    } = useForm(); 
 
-    const onSubmit = () => { //função que executa o nextstep
+
+    const onSubmit = () => { 
         nextStep();
     };
 
-    // Definir os steps e repassar as props corretamente
-    const steps = [ //array que contém os componentes
-        <ContainerStep1Component key={0} register={register} errors={errors} setValue={setValue} />,
+    const steps = [
+        <ContainerStep1Component key={0} register={register} errors={errors} control={control} />,
         <ContainerStep2Component key={1} register={register} errors={errors} clearErrors={clearErrors}/>,
         <ContainerStep3Component key={2} register={register} errors={errors} />,
         <ContainerStep4Component key={3} register={register} errors={errors} />,

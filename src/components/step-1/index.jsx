@@ -1,8 +1,9 @@
 import React from "react";
-import { ContainerStep, Title, SubTitle, LabelInput, Input, ErrorMessage } from "./style";
+import { ContainerStep, Title, SubTitle, LabelInput, Input, ErrorMessage, DivInput } from "./style";
 import { IMaskInput } from "react-imask";
+import { Controller } from "react-hook-form"; // Importando Controller
 
-export const ContainerStep1Component = ({ register, errors, setValue }) => {
+export const ContainerStep1Component = ({ register, errors, control }) => {
     return (
         <ContainerStep>
             <Title>Seus dados</Title>
@@ -33,24 +34,32 @@ export const ContainerStep1Component = ({ register, errors, setValue }) => {
             {errors?.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
 
             <LabelInput>Celular</LabelInput>
-            <IMaskInput
-                mask="(00) 00000-0000"
-                placeholder="(99) 99999-9999"
-                className={errors?.number && "input-error"}
-
-                {...register("number", {
+            <DivInput>
+            <Controller
+                name="number"
+                control={control}  // Passando o control
+                rules={{
                     required: "Celular é obrigatório",
                     pattern: {
                         value: /^\(\d{2}\) \d{5}-\d{4}$/,
                         message: "Digite no formato (99) 99999-9999",
                     },
-                    
-                })}
-                onAccept={(value) => {
-                    // Atualiza o valor no react-hook-form
-                    setValue("number", value, { shouldValidate: true });
                 }}
+                render={({ field }) => (
+                    <IMaskInput
+                        {...field}  // Integrando o react-hook-form com o IMaskInput
+                        mask="(00) 00000-0000"
+                        placeholder="(99) 99999-9999"
+                        className={errors?.number && "input-error"}
+                        style={{color: 'var(--primary-color)'}}
+                        onAccept={(value) => {
+                            field.onChange(value);  // Atualizando o valor no react-hook-form
+                        }}
+                    />
+                )}
             />
+            </DivInput>
+            
             {errors?.number && <ErrorMessage>{errors.number.message}</ErrorMessage>}
         </ContainerStep>
     );

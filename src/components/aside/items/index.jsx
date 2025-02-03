@@ -1,10 +1,10 @@
 import { NumberItem, InfoSteps, Info, InfoH3, InfoH4 } from "./style";
 import { useContext } from "react";
-import { StepContext } from "../../contexts/stepContext";
+import { StepContext } from "../../../contexts/stepContext";
 
 export const Items = () => {
 
-    const {currentStep, nextStep, prevStep} = useContext(StepContext)
+    const { currentStep } = useContext(StepContext)
     return (
         <>
             <InfoSteps>

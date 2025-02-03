@@ -7,7 +7,5 @@ export const Aside = ({children}) => {
                 {children}
             </SideMenu>
         </>
-
-
     )
 }

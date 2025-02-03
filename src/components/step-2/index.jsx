@@ -1,11 +1,9 @@
 import { DivPlans, Plan, PricePlan, ContainerStep, SubTitle, Title, NamePlan, ButtonToggle, DivToggle, TextToggle, TextPlan, Radio, ErrorMessage } from "./style";
-import { PaymentContext } from "../contexts/paymentContext";
-import { PlanContext } from "../contexts/planContext";
+import { PaymentContext } from "../../contexts/paymentContext";
+import { PlanContext } from "../../contexts/planContext";
 import { useContext } from "react";
-import { useForm } from "react-hook-form";
-import { plans } from "../contexts/paymentContext";
 
-export const ContainerStep2Component = ({register, errors, clearErrors }) => {
+export const ContainerStep2Component = ({ register, errors, clearErrors }) => {
 
     const { payment, changePayment } = useContext(PaymentContext)
 
@@ -13,10 +11,6 @@ export const ContainerStep2Component = ({register, errors, clearErrors }) => {
 
     const plans = payment.plans
 
-
-    console.log(payment.name)
-
-    console.log(`pagemento tipo: ${payment.name} planio selecionado: ${plans}`)
     return (
         <>
             <ContainerStep>
@@ -30,21 +24,18 @@ export const ContainerStep2Component = ({register, errors, clearErrors }) => {
                                 changePlan(i.key);
                                 clearErrors('plan')
                             }}
-                            className={plan == i.key ? 'active' : ''}
-                        >
+                            className={plan == i.key ? 'active' : ''}>
                             <img src={i.image} alt="" />
                             <TextPlan>
                                 <NamePlan>{i.name}</NamePlan>
                                 <PricePlan>R$ {i.price + payment.suffix}</PricePlan>
                             </TextPlan>
-
-                            <Radio 
-                            type="radio"
-                            value={i.key}
-                            checked={plan === i.key} // Mantém sempre selecionado o estado atual
-                            {...register("plan", { required: "Selecione um plano!" })}
+                            <Radio
+                                type="radio"
+                                value={i.key}
+                                checked={plan === i.key} // Mantém sempre selecionado o estado atual
+                                {...register("plan", { required: "Selecione um plano!" })}
                             />
-
                         </Plan>
                     ))}
                     {errors.plan && <ErrorMessage style={{ color: "red" }}>{errors.plan.message}</ErrorMessage>}
@@ -55,7 +46,7 @@ export const ContainerStep2Component = ({register, errors, clearErrors }) => {
                     </DivToggle>
                     {errors.plan && <ErrorMessage style={{ color: "red" }}>{errors.plan.message}</ErrorMessage>}
                 </DivPlans>
-                
+
             </ContainerStep>
         </>
     )

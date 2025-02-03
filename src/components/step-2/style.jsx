@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { MediaSizes } from "../../style/media-sizes/media-sizes";
 
-
-
 export const ContainerStep = styled.div`
     width: 50%;
     background-color: transparent;

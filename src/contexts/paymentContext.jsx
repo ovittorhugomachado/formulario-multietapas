@@ -2,7 +2,6 @@ import { createContext, useState } from "react";
 
 export const PaymentContext = createContext()
 
-
 export const plans = {
     month: {
         name: 'mensal',
@@ -112,10 +111,7 @@ export const PaymentProvider = ({children}) => {
 
     const [ payment, setPayment] = useState(plans.month)
 
-
     const [ listAdditionals, setListAdditionals] = useState([])
-
-    console.log(payment)
 
     const changePayment = () => {
         setPayment((prevPlan) => prevPlan === plans.month ? plans.year : plans.month)

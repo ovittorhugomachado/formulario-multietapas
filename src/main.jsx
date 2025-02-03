@@ -1,11 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { StepProvider } from './components/contexts/stepContext'
+import { StepProvider } from './contexts/stepContext.jsx'
 
 import App from './App.jsx'
-import { PaymentProvider } from './components/contexts/paymentContext.jsx'
-import { PlanProvider } from './components/contexts/planContext.jsx'
-import { AdditionalsProvider } from './components/contexts/additionalsContext.jsx'
+import { PaymentProvider } from './contexts/paymentContext.jsx'
+import { PlanProvider } from './contexts/planContext.jsx'
+import { AdditionalsProvider } from './contexts/additionalsContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

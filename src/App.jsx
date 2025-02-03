@@ -3,7 +3,6 @@ import { Aside } from './components/aside'
 import { Items } from './components/aside/items'
 import { GlobalStyle } from './style/global-style'
 
-
 function App() {
   
   return (
