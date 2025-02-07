@@ -33,7 +33,7 @@ export const ContainerStep2Component = ({ register, errors, clearErrors }) => {
                             <Radio
                                 type="radio"
                                 value={i.key}
-                                checked={plan === i.key} // Mantém sempre selecionado o estado atual
+                                checked={plan === i.key}
                                 {...register("plan", { required: "Selecione um plano!" })}
                             />
                         </Plan>
