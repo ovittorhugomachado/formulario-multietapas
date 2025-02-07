@@ -37,7 +37,7 @@ export const Input = styled.input`
     color: var(--primary-color);
     @media (max-width: ${MediaSizes.mobile}) {
         height: 36px;
-        padding-left: 5px
+        padding-left: 15px
     }
     &.input-error {
         border: 1px solid var(--error-color)

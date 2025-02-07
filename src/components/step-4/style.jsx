@@ -12,7 +12,7 @@ export const ContainerStep = styled.div`
         background-color: #fff;
         padding: 40px 30px;
         width: 80%;
-        height: 400px;
+        height: 450px;
         position: absolute;
         top: 100px;
         right: 50%;
@@ -21,7 +21,7 @@ export const ContainerStep = styled.div`
         text-align: center;     
         };
     @media (max-width: ${MediaSizes.tablet}) {
-        height: 430px;
+        height: 450px;
         width: 90%;
         padding-top: 30px;
         };
@@ -35,6 +35,13 @@ export const Title = styled.h1`
 `
 
 export const SubTitle = styled.h2`
+`
+
+export const DivPlanMoreAdditionals = styled.div`
+    background-color:rgb(245, 243, 243);
+    padding: 10px 15px;
+    border-radius: 9px
+
 `
 
 export const PlanFinish = styled.div`
@@ -72,20 +79,25 @@ export const Item = styled.h2`
     font-weight: 400;
     margin: 20px 0;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    text-align: start;
+    @media (max-width: ${MediaSizes.mobile}) {
+        font-size: 16px;
+    }
 `
 
 export const PriceItem = styled.span`
-    color: var(--primary-color)
+    color: var(--primary-color);
 `
 
 export const Total = styled.div`
     color: var(--secondary-color);
     font-size: 18px;
     font-weight: 400;
-    margin: 43px 0;
+    margin-top: 10px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    padding: 0 15px;
 `
 
 export const PriceTotal = styled.span`

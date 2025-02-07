@@ -110,6 +110,9 @@ export const DivToggle = styled.div`
     display: flex;
     justify-content: center;
     gap: 12px;
+    @media (max-width: ${MediaSizes.mobile}) {
+        bottom: -50px;
+        }
 `
 
 export const ButtonToggle = styled.button`

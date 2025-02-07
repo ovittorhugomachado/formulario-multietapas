@@ -1,4 +1,4 @@
-import { ChangePlan, ContainerStep, PlanFinish, PlanName, SubTitle, Title, Total, Text, PlanPrice, Item, PriceItem, PriceTotal } from "./style"
+import { ChangePlan, ContainerStep, PlanFinish, PlanName, SubTitle, Title, Total, Text, PlanPrice, Item, PriceItem, PriceTotal, DivPlanMoreAdditionals } from "./style"
 import { useContext } from "react"
 import { PaymentContext } from "../../contexts/paymentContext"
 import { PlanContext } from "../../contexts/planContext"
@@ -24,19 +24,22 @@ export const ContainerStep4Component = () => {
             <ContainerStep>
                 <Title>Resumo</Title>
                 <SubTitle>Confira abaixo o resumo detalhado das suas assinaturas</SubTitle>
-                <PlanFinish>
-                    <Text>
-                        <PlanName>{payment.plans[plan].name}</PlanName>
-                        <ChangePlan onClick={() => changePlan()}>trocar plano</ChangePlan>
-                    </Text>
-                    <PlanPrice>R$ {payment.plans[plan].price + payment.suffix}</PlanPrice>
-                </PlanFinish>
-                {additionals.map((i) => (
-                    <Item key={i.key}>
-                        {i.name}
-                        <PriceItem>R$ {i.price + payment.suffix}</PriceItem>
-                    </Item>
-                ))}
+                <DivPlanMoreAdditionals>
+                    <PlanFinish>
+                        <Text>
+                            <PlanName>{payment.plans[plan].name}</PlanName>
+                            <ChangePlan onClick={() => changePlan()}>trocar plano</ChangePlan>
+                        </Text>
+                        <PlanPrice>R$ {payment.plans[plan].price + payment.suffix}</PlanPrice>
+                    </PlanFinish>
+                    {additionals.map((i) => (
+                        <Item key={i.key}>
+                            {i.name}
+                            <PriceItem>R$ {i.price + payment.suffix}</PriceItem>
+                        </Item>
+                    ))}
+                </DivPlanMoreAdditionals>
+
                 <Total>Total<PriceTotal>R$ {pricePlan + priceAdditionals + payment.suffix}</PriceTotal></Total>
             </ContainerStep>
         </>

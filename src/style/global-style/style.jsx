@@ -97,14 +97,19 @@ input {
     font-weight: 500;
     border-radius: 7px;
     border: 1px solid var(--secondary-color);
-    padding-left: 20px;
+    padding-left: 15px;
     margin-bottom: 24px;
     &::placeholder {
         color: var(--secondary-color);
         opacity: 0.9;
     @media (max-width: ${MediaSizes.desktopSmall}) {
         margin-bottom: 14px;
-        padding-left: 15px;    
+        padding-left: 15px;   
+       
+    };
+    @media (max-width: ${MediaSizes.mobile}) {
+        margin-bottom: 14px;
+        padding-left: 5px;    
     };
 }
 `
