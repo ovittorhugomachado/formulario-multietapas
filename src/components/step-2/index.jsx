@@ -40,9 +40,9 @@ export const ContainerStep2Component = ({ register, errors, clearErrors }) => {
                     ))}
                     {errors.plan && <ErrorMessage style={{ color: "red" }}>{errors.plan.message}</ErrorMessage>}
                     <DivToggle>
-                        <TextToggle className={payment.name === "mensal" ? "active" : ""}>Por mês</TextToggle>
+                        <TextToggle className={payment.suffix === "/mês" ? "active" : ""}>Por mês</TextToggle>
                         <ButtonToggle prop={payment} onClick={changePayment} />
-                        <TextToggle className={payment.name === "anual" ? "active" : ""}>Por ano</TextToggle>
+                        <TextToggle className={payment.suffix === "/ano" ? "active" : ""}>Por ano</TextToggle>
                     </DivToggle>
                     {errors.plan && <ErrorMessage style={{ color: "red" }}>{errors.plan.message}</ErrorMessage>}
                 </DivPlans>
