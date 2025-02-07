@@ -34,6 +34,7 @@ export const LabelInput = styled.label`
 `
 
 export const Input = styled.input`
+    color: var(--primary-color);
     @media (max-width: ${MediaSizes.mobile}) {
         height: 36px;
         padding-left: 5px

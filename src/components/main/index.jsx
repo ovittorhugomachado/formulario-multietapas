@@ -28,16 +28,16 @@ export const Main = ({ children }) => {
     const steps = [
         <ContainerStep1Component key={0} register={register} errors={errors} control={control} />,
         <ContainerStep2Component key={1} register={register} errors={errors} clearErrors={clearErrors}/>,
-        <ContainerStep3Component key={2} register={register} errors={errors} />,
-        <ContainerStep4Component key={3} register={register} errors={errors} />,
-        <ContainerStep5Component key={4} register={register} errors={errors} />,
+        <ContainerStep3Component key={2} />,
+        <ContainerStep4Component key={3} />,
+        <ContainerStep5Component key={4} />,
     ];
 
-    return ( //o que é renderizado
+    return ( 
         <>
             <Container>
-                {children} {/* faz comque o comoponnete possa receber outros componentes dentro dele */}
-                {steps[currentStep]} {/* renderiza um item do step e o valor dentro dos colchetes vem do state */}
+                {children} 
+                {steps[currentStep]} 
                 <Buttons>
                     <ButtonBack onClick={prevStep} className={currentStep < 1 ? "disable" : ""}>
                         Voltar
