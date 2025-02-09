@@ -6,7 +6,7 @@
 ---
 
 ## 🚧 Principais desafios :
- A aplicação de máscara no imput celular, estava fazendo com que os dados inseridos não ficassem salvos, mas pesquisando na documentação do **React Hook form** descobri como usar o **método controller**, que faz com que o componente do ReactIMask também seja controlado pelo React Hook Form.  
+ A aplicação de máscara no input celular, estava fazendo com que os dados inseridos não ficassem salvos, mas pesquisando na documentação do **React Hook form** descobri como usar o **método controller**, que faz com que o componente do ReactIMask também seja controlado pelo React Hook Form.  
 link de referência do método: https://react-hook-form.com/docs/usecontroller/controller
 
 ---
