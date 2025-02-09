@@ -12,6 +12,9 @@ link de referência do método: https://react-hook-form.com/docs/usecontroller/c
 ---
 
 ## 🚀 Tecnologias Utilizadas
+<img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/html.png" width="40px" > <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/css.png" width="40px" > <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" width="32px" > <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" width="32px" >
+
+-
 
 - **HTML5**: Estrutura.
 - **CSS3**: Aplicação de estilos e transições.
