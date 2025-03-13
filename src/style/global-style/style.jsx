@@ -19,32 +19,33 @@ export const Styles = createGlobalStyle`
 }
 
 html {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-  margin: 0 auto;
-  background-color: "var(--background-body)";
-}
+    margin: 0 auto;
+    background-color: "var(--background-body)";
+    }
 
-#root { /*temporario*/
-  background-color: var(--background-body);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#root {
+    height: 100vh;
+    background-color: var(--background-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
-  text-decoration: none;
+    
 }
 
 h1 {
-color: var(--primary-color);
-font-weight: 700;
-     @media (max-width: ${MediaSizes.mobile}) {
-        font-size: 25px ;    
-    }
+    color: var(--primary-color);
+    font-weight: 700;
+        @media (max-width: ${MediaSizes.mobile}) {
+            font-size: 25px ;    
+        }
 }
 
 h2 {
