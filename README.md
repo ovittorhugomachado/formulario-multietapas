@@ -1,7 +1,7 @@
 # 👨‍💻 Desafio FrontEnd Mentor: Formulário multietapas #
 
 ## 🎯Objetivo :
- Este é um dos desafios da plataforma FrontEnd Mentor, com dificuldade avançada, minha intenção com esse desafio é praticar minhas habilidades em React, toda a inteface foi criada com a biblioteca de UI. 
+ Este é um dos desafios da plataforma FrontEnd Mentor, com dificuldade avançada, minha intenção com esse desafio foi praticar minhas habilidades em formulários e React, toda a inteface foi criada com a biblioteca de UI. 
 
 ---
 
@@ -15,17 +15,24 @@ link de referência do método: https://react-hook-form.com/docs/usecontroller/c
 <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/html.png" width="40px" > <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/css.png" width="40px" > <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" width="32px" > <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" width="32px" >
 
 - **HTML5**: Estrutura.
+  
 - **CSS3**: Aplicação de estilos e transições.
-- **JavaScript**: Criação de arrays e condicionais.
-- **React**: Criação da inteface, com uso de componentes e estados (useState).
-- **Styled Components**: Criação de estilo global, podendo assim precisar reescrever as propriedades e estilos.
-- **React Hook Form**: Validação e gerenciamento do formulário.
+  
+- **JavaScript**: Validação de formulário, Criação de funções, arrays e condicionais.
+  
+- **React**: Criação da inteface, com uso de componentes, contexto e estados (usecontext e useState).
+  
+- **Styled Components**: Criação de estilo global, podendo assim reutlizar propriedades e estilos.
+  
+- **React Hook Form**: Gerenciamento do formulário.
+  
 - **React IMask**: uso de máscara no input celular no formato desejado ((xx) xxxxx-xxxx).
 
 ---
 
 ## 🎯 Funcionalidades
 - **Acessibilidade**: Aplicação otimizada para leitores de tela.
+  
 - **Boas Práticas de Código**: Uso de tags semânticas para melhor estruturação da página.
 
 ## 🎨 Design da Página
