@@ -30,7 +30,7 @@ link de referência do método: https://react-hook-form.com/docs/usecontroller/c
 
 ---
 
-## 🎯 Funcionalidades
+## ⚙️ Funcionalidades
 - **Acessibilidade**: Aplicação otimizada para leitores de tela.
   
 - **Boas Práticas de Código**: Uso de tags semânticas para melhor estruturação da página.
